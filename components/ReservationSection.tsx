@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function ReservationSection() {
   return (
-    <section className="relative w-full overflow-hidden flex flex-col">
+    <section id="reservation" className="relative w-full overflow-hidden flex flex-col scroll-mt-20 lg:scroll-mt-24">
       
       {/* Top part with primary blue background */}
       <div className="w-full bg-primary relative z-10 pt-16 lg:pt-24 pb-16 lg:pb-32">

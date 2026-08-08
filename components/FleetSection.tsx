@@ -44,7 +44,7 @@ export default function FleetSection() {
   };
 
   return (
-    <section id="equipment" className="bg-white relative overflow-hidden pt-24 md:pt-32">
+    <section id="equipment" className="bg-white relative overflow-hidden pt-24 md:pt-32 scroll-mt-20 lg:scroll-mt-24">
       {/* Full-width off-white background for the bottom half */}
       <div className="absolute bottom-0 left-0 w-full h-[65%] md:h-[55%] z-0"></div>
 

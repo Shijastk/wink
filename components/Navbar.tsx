@@ -71,7 +71,7 @@ export default function Navbar() {
 
           {/* Far Right Section (CTA Button) */}
           <Link 
-            href="/#contact"
+            href="/#reservation"
             className={`flex items-center justify-center bg-primary text-white font-medium text-sm tracking-wide uppercase px-6 md:px-10 rounded-none hover:bg-black transition-all duration-300 ${buttonHeightClass}`}
           >
             Contact Us

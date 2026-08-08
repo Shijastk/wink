@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function BusinessTransfers() {
   return (
-    <section id="about" className="bg-white py-24 px-6 md:px-12 lg:px-20 relative">
+    <section id="about" className="bg-white py-24 px-6 md:px-12 lg:px-20 relative scroll-mt-20 lg:scroll-mt-24">
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
         
         {/* Left Column - Sharp Large Image */}
