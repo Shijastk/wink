@@ -90,52 +90,56 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black via-black/40 to-black/10 z-10" />
 
       {/* Content Container */}
-      <div className="relative z-20 container mx-auto px-6 md:px-12 lg:px-20 w-full h-full flex items-end pb-[50px]">
-        <div className="w-full text-left relative z-10">
-          <div key={currentIndex} className="animate-fade-in-up">
-            <p className="text-white font-sans text-xs md:text-sm font-bold mb-4 tracking-[0.2em] uppercase">
-              {CONTENT[currentIndex].kicker}
-            </p>
-            <h1 className="text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] xl:text-[7.5rem] text-white font-sans font-bold leading-[0.9] tracking-tight uppercase block whitespace-nowrap">
-              {CONTENT[currentIndex].titleLine1}
-              <br />
-              {CONTENT[currentIndex].titleLine2}
-            </h1>
-          </div>
-        </div>
-
-        <div className="absolute right-6 md:right-12 lg:right-20 bottom-[50px] z-20 flex flex-col items-end pb-4">
-          <div className="flex items-center mb-8 justify-end">
-            <div className="hidden md:block h-[1px] bg-white/30 w-24 md:w-48 mr-8"></div>
-            <p className="text-white text-base md:text-lead font-sans text-left max-w-[20rem] leading-snug">
-              {/* {CONTENT[currentIndex].description} */}
-            </p>
+      <div className="relative z-20 container mx-auto px-6 md:px-12 lg:px-20 w-full h-full flex flex-col justify-end pb-[50px]">
+        
+        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 lg:gap-0 relative z-10">
+          
+          <div className="w-full lg:w-auto text-left">
+            <div key={currentIndex} className="animate-fade-in-up">
+              <p className="text-white font-sans text-xs md:text-sm font-bold mb-4 tracking-[0.2em] uppercase">
+                {CONTENT[currentIndex].kicker}
+              </p>
+              <h1 className="text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] xl:text-[7.5rem] text-white font-sans font-bold leading-[0.9] tracking-tight uppercase block whitespace-nowrap">
+                {CONTENT[currentIndex].titleLine1}
+                <br />
+                {CONTENT[currentIndex].titleLine2}
+              </h1>
+            </div>
           </div>
 
-          <div className="flex items-center justify-end gap-8 text-white font-newsreader italic text-h4 tracking-widest lg:pr-4">
-            <button
-              onClick={handlePrev}
-              className="hover:text-white/70 transition-colors p-2 cursor-pointer flex items-center"
-              aria-label="Previous Slide"
-            >
-              <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 1L1 6L5 11M1 6H60" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            
-            <span className="w-16 text-center tabular-nums">
-              {currentIndex + 1} / {IMAGES.length}
-            </span>
-            
-            <button
-              onClick={handleNext}
-              className="hover:text-white/70 transition-colors p-2 cursor-pointer flex items-center"
-              aria-label="Next Slide"
-            >
-              <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M55 1L59 6L55 11M59 6H0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
+          <div className="z-20 flex flex-col items-start lg:items-end pb-0 lg:pb-4 w-full lg:w-auto">
+            <div className="hidden lg:flex items-center mb-8 justify-end">
+              <div className="h-[1px] bg-white/30 w-24 md:w-48 mr-8"></div>
+              <p className="text-white text-base md:text-lead font-sans text-left max-w-[20rem] leading-snug">
+                {/* {CONTENT[currentIndex].description} */}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-start lg:justify-end gap-8 text-white font-newsreader italic text-h4 tracking-widest lg:pr-4">
+              <button
+                onClick={handlePrev}
+                className="hover:text-white/70 transition-colors py-2 pr-4 cursor-pointer flex items-center"
+                aria-label="Previous Slide"
+              >
+                <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 1L1 6L5 11M1 6H60" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              
+              <span className="w-16 text-center tabular-nums">
+                {currentIndex + 1} / {IMAGES.length}
+              </span>
+              
+              <button
+                onClick={handleNext}
+                className="hover:text-white/70 transition-colors py-2 pl-4 cursor-pointer flex items-center"
+                aria-label="Next Slide"
+              >
+                <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M55 1L59 6L55 11M59 6H0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
