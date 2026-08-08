@@ -4,19 +4,24 @@ import ParallaxImage from './animations/ParallaxImage';
 
 const drivers = [
   {
-    name: "James Sterling",
-    role: "Senior Chauffeur",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    name: "Marco De Luca",
+    role: "Personal Coach",
+    image: "/images/driver1.png"
   },
   {
-    name: "Elena Rostova",
-    role: "Executive Driver",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzMT9d0l5D0fZrjq9vZh6toLYklY5IqJK7ZK-J-VcdT6ivDA63dyg7ig0&s=10"
+    name: "Enzo Romano",
+    role: "Sales Manager",
+    image: "/images/driver2.png"
   },
   {
-    name: "Marcus Thorne",
-    role: "VIP Specialist",
-    image: "https://images.pexels.com/photos/3707987/pexels-photo-3707987.jpeg"
+    name: "Martina Greco",
+    role: "Finance Consultant",
+    image: "/images/driver3.png"
+  },
+  {
+    name: "Fabio Santoro",
+    role: "Business advisor",
+    image: "/images/driver4.png"
   }
 ];
 
@@ -39,7 +44,7 @@ const TikTokIcon = () => (
 
 export default function DriversSection() {
   return (
-    <section className="bg-white py-24 md:py-32 border-t border-gray-100 overflow-hidden">
+    <section className="bg-[#F9F9F9] py-24 md:py-32 border-t border-gray-100 overflow-hidden w-full">
       
       {/* Header Container (Constrained Width) */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mb-16 md:mb-24">
@@ -55,7 +60,7 @@ export default function DriversSection() {
 
       {/* Drivers Grid (Full Screen Width) */}
       <div className="w-full px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {drivers.map((driver, idx) => (
             <FadeIn key={idx} delay={idx * 0.15} className="group cursor-pointer">
               {/* Image Container */}

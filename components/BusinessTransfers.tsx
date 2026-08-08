@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function BusinessTransfers() {
   return (
-    <section className="bg-white py-24 px-6 md:px-12 lg:px-20 relative">
+    <section id="about" className="bg-white py-24 px-6 md:px-12 lg:px-20 relative">
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
         
         {/* Left Column - Sharp Large Image */}
@@ -25,14 +25,14 @@ export default function BusinessTransfers() {
           
           <div className="mb-16">
             <p className="text-black font-sans text-xs font-bold mb-6 tracking-[0.2em] uppercase flex items-center gap-4">
-               <span className="w-12 h-[1px] bg-black"></span> Global Standards
+               <span className="w-12 h-[1px] bg-black"></span> Established 2012
             </p>
             <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] text-black font-sans font-bold leading-[1] tracking-tight mb-8 uppercase">
-              Limousine Transfers<br />
-              Around The World
+              12 Years of Excellence<br />
+              in Luxury Travel
             </h2>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
-              Every leg of your journey is a reflection of your commitment to excellence. Your ground transportation should be unified under a single, uncompromising standard—anywhere you travel.
+              With over 12 years of experience in this field, our company has set the standard for premium limousine services. Every leg of your journey reflects our unwavering commitment to excellence and unparalleled comfort—anywhere you travel.
             </p>
           </div>
 

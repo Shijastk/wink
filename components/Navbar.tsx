@@ -58,32 +58,20 @@ export default function Navbar() {
                 <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-primary transition-colors">About Us</Link>
+                <Link href="/#services" className="hover:text-primary transition-colors">Services</Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
+                <Link href="/#about" className="hover:text-primary transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/equipment" className="hover:text-primary transition-colors">Equipment</Link>
-              </li>
-              <li className="flex items-center cursor-pointer hover:text-primary transition-colors group relative">
-                <span>All Pages</span>
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-4 w-4 ml-1 transition-transform group-hover:rotate-180" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <Link href="/#equipment" className="hover:text-primary transition-colors">Equipment</Link>
               </li>
             </ul>
           </div>
 
           {/* Far Right Section (CTA Button) */}
           <Link 
-            href="/contact"
+            href="/#contact"
             className={`flex items-center justify-center bg-primary text-white font-medium text-sm tracking-wide uppercase px-6 md:px-10 rounded-none hover:bg-black transition-all duration-300 ${buttonHeightClass}`}
           >
             Contact Us

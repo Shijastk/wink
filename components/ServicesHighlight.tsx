@@ -20,7 +20,7 @@ const services = [
 
 export default function ServicesHighlight() {
   return (
-    <section className="w-full bg-black text-white py-16 px-6 md:px-12 lg:px-20">
+    <section id="services" className="w-full bg-black text-white py-16 px-6 md:px-12 lg:px-20">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col group cursor-pointer">
