@@ -11,10 +11,10 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    
+
     // Initial check
     handleScroll();
-    
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -37,13 +37,13 @@ export default function Navbar() {
               When scrolled (white navbar): 'multiply' drops the white background leaving the blue logo.
               When top (dark transparent navbar): invert makes bg black/text white, 'screen' drops the black bg leaving white text!
             */}
-            <img 
-              src="/images/logo.png" 
-              alt="Wink Limousine & Transportation" 
+            <img
+              src="/images/logo.png"
+              alt="Wink Limousine & Transportation"
               className={`${logoSizeClass} w-auto object-contain transition-all duration-300`}
               style={
                 (isScrolled || isMobileMenuOpen)
-                  ? { mixBlendMode: 'multiply' } 
+                  ? { mixBlendMode: 'multiply' }
                   : { filter: 'grayscale(1) contrast(200%) invert(1)', mixBlendMode: 'screen' }
               }
             />
@@ -71,16 +71,16 @@ export default function Navbar() {
           </div>
 
           {/* Far Right Section (CTA Button) */}
-          <Link 
+          <Link
             href="/#reservation"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`flex items-center justify-center bg-primary text-white font-medium text-xs md:text-sm tracking-wide uppercase px-4 md:px-8 rounded-none hover:bg-black transition-all duration-300 ${buttonHeightClass}`}
+            className={`hidden sm:flex items-center justify-center bg-primary text-white font-medium text-xs md:text-sm tracking-wide uppercase px-4 md:px-8 rounded-none hover:bg-black transition-all duration-300 ${buttonHeightClass}`}
           >
             Contact Us
           </Link>
 
           {/* Mobile Menu Button (Visible on small screens) */}
-          <button 
+          <button
             className={`lg:hidden flex flex-col justify-center items-end gap-[5px] w-10 h-full ml-4 group ${textColorClass}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
@@ -93,7 +93,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Dropdown Menu (White Card) */}
-      <div 
+      <div
         className={`absolute top-full left-0 w-full bg-white shadow-xl transition-all duration-300 lg:hidden overflow-hidden origin-top ${isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}
       >
         <div className="flex flex-col px-6 py-4">
@@ -101,6 +101,17 @@ export default function Navbar() {
           <Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-900 uppercase text-sm font-medium tracking-wide hover:text-primary transition-colors py-4 border-b border-gray-100">Services</Link>
           <Link href="/#about" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-900 uppercase text-sm font-medium tracking-wide hover:text-primary transition-colors py-4 border-b border-gray-100">About Us</Link>
           <Link href="/#equipment" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-900 uppercase text-sm font-medium tracking-wide hover:text-primary transition-colors py-4">Equipment</Link>
+          
+          {/* Mobile CTA Button inside menu for very small screens */}
+          <div className="sm:hidden mt-2 mb-2">
+            <Link 
+              href="/#reservation"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center justify-center bg-primary text-white font-medium text-sm tracking-wide uppercase px-4 py-3 rounded-none hover:bg-black transition-all duration-300 w-full"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
